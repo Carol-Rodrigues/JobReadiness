@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">JobReadinessChallenge</string>
+    <string name="search_bar">Buscar no Mercado Livre</string>
+    <string name="searched"><i>Item buscado:</i></string>
+    <string name="to_ask">Perguntar</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="add_favorite">Adicionar a favoritos</string>
+    <string name="share">Compartilhar</string>
+    <string name="iw_card_description">Item photos</string>
+    <string name="iw_favorite_description">Little heart image</string>
+    <string name="iw_share_description">Little share vector</string>
+</resources>

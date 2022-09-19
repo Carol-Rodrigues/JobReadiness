@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.ItemDetailedActivity"
+    >
+
+    <include
+        layout="@layout/items_toolbar"
+        android:id="@+id/toolbar_item"
+        />
+
+    <TextView
+        android:id="@+id/tw_title_small"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:maxLines="4"
+        android:singleLine="false"
+        android:textColor="@color/grey_meli"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="TextContrastCheck"
+        tools:text="Volskagen" />
+
+    <TextView
+        android:id="@+id/tw_title_big"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="16dp"
+        android:maxLines="4"
+        android:singleLine="false"
+        android:textColor="@color/black_meli"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tw_title_small"
+        tools:text="Volskagen" />
+
+    <ImageView
+        android:id="@+id/iw_navigate_before"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_baseline_navigate_before_24"
+        app:layout_constraintEnd_toStartOf="@id/iw_item_pictures"
+        app:layout_constraintTop_toBottomOf="@id/tw_title_big"
+        android:layout_marginTop="140dp"
+        />
+
+    <ImageView
+        android:id="@+id/iw_item_pictures"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tw_title_big"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintVertical_bias="0.35"
+        app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+        android:contentDescription="@string/iw_card_description" />
+
+    <ImageView
+        android:id="@+id/iw_navigate_after"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/ic_baseline_navigate_next_24"
+        app:layout_constraintStart_toEndOf="@id/iw_item_pictures"
+        app:layout_constraintTop_toBottomOf="@id/tw_title_big"
+        android:layout_marginTop="140dp"
+        />
+
+    <TextView
+        android:id="@+id/tw_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="16dp"
+        android:textColor="@color/black_meli"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iw_item_pictures"
+        tools:text="$ 2.200.000" />
+
+    <Button
+        android:id="@+id/bt_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/blue_meli"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="10dp"
+        android:text="@string/to_ask"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_wpp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tw_item_price"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/bt_wpp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/blue_meli"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="10dp"
+        android:text="@string/whatsapp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toEndOf="@id/bt_ask"
+        app:layout_constraintTop_toBottomOf="@id/tw_item_price"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/iw_favorite"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_ask"
+        android:layout_marginStart="20dp"
+        app:srcCompat="@drawable/ic_baseline_favorite_border_24_blue"
+        android:contentDescription="@string/iw_favorite_description" />
+
+    <TextView
+        android:id="@+id/tw_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/add_favorite"
+        android:textColor="@color/blue_meli"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iw_favorite"
+        app:layout_constraintTop_toBottomOf="@id/bt_ask"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/iw_share"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:elevation="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tw_favorite"
+        app:layout_constraintTop_toBottomOf="@id/bt_ask"
+        android:layout_marginStart="12dp"
+        app:srcCompat="@drawable/ic_outline_share_24"
+        android:contentDescription="@string/iw_share_description"
+        />
+
+    <TextView
+        android:id="@+id/tw_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/share"
+        android:textColor="@color/blue_meli"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iw_share"
+        app:layout_constraintTop_toBottomOf="@id/bt_ask"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

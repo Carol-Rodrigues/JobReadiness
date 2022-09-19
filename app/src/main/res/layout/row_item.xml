@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iw_thumbItem"
+        android:layout_width="131dp"
+        android:layout_height="131dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/ic_baseline_shopping_cart_24"
+        android:contentDescription="@string/iw_card_description" />
+
+    <TextView
+        android:id="@+id/tw_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="4"
+        android:singleLine="false"
+        android:textColor="@color/black_meli"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iw_thumbItem"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Volksvagen Fox" />
+
+    <TextView
+        android:id="@+id/tw_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black_meli"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/iw_thumbItem"
+        app:layout_constraintTop_toBottomOf="@id/tw_item_title"
+        tools:text="$ 2.200.000" />
+
+    <TextView
+        android:id="@+id/tw_item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/grey_meli"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/iw_thumbItem"
+        app:layout_constraintTop_toBottomOf="@id/tw_item_price"
+        tools:ignore="TextContrastCheck"
+        tools:text="2019 - 37.000k" />
+
+    <TextView
+        android:id="@+id/tw_category_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/grey_meli"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/iw_thumbItem"
+        app:layout_constraintTop_toBottomOf="@id/tw_item_id"
+        tools:ignore="TextContrastCheck"
+        tools:text="Bs.As. G.B.A. Norte" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/light_grey_meli"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iw_thumbItem" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
